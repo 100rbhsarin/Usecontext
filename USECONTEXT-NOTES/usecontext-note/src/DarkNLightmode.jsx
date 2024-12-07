@@ -1,5 +1,6 @@
-import { Children, createContext, useContext, useState } from "react"
-
+import {  createContext, useContext, useState } from "react"
+import { LuSunMoon } from "react-icons/lu";
+import { IoSunny } from "react-icons/io5";
 
 
 export const MoodContext = createContext()
@@ -29,10 +30,16 @@ return setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
 
         return(
             <>
-<div style={{ background: mode === "light" ? "#fff" : "#333", color: mode === "light" ? "#000" : "#fff", height: "100vh", textAlign: "center" }}>
+<div style={{ 
+    background: mode === "light" ? "#fff" : "#333", 
+             color: mode === "light" ? "#000" : "#fff", 
+              height: "100vh",
+                  textAlign: "center" 
+                  }}>
+
 <h1>Dark and light mood website </h1>
-<p> hii this is react  🚀 </p>
-<button onClick={HandleToggle}>{mode === "dark" ? "change to light mode" : " change to dark mode"}</button>
+<p> hii this is react {mode === "dark" ? <LuSunMoon />:  <IoSunny/>}</p>
+<button onClick={HandleToggle}> {mode === "dark" ? <LuSunMoon />:  <IoSunny/>}</button>
 
             </div>
             
