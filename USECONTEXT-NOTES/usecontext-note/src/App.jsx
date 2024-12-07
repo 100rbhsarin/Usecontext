@@ -1,20 +1,23 @@
-import { BioContext, BioProvider } from "."
-import { Home } from "./Home"
-import {About} from './About'
+import React from "react";
+import { BioProvider } from ".";
+import { Home } from "./Home";
+import { About } from "./About";
+import { Services } from "./Services";
+import { DarkLight, ThemeChange } from './DarkNLightmode'
 
-
-
-export const App = () =>{
-
-
+export const App = () => {
   return (
     <>
-    <BioProvider>
-    <Home/>
-    <About/>
-    </BioProvider>
+    {/* <BioProvider>
+      <Home />
+      <About />
+      <Services />
+    </BioProvider> */}
+    <ThemeChange>
+    <DarkLight/>
+    </ThemeChange>
    
-    
- </>
-  )
-}
+   
+     </>
+  );
+};

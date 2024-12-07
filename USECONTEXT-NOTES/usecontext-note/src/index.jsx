@@ -1,14 +1,18 @@
-// import { createContext, useContext } from "react";
-import { createContext, use } from "react";
 
-// 1 step
+
+
+// import React, {createContext, useContext } from "react";
+import {createContext, useContext } from "react";
+
+
+// Step 1: Create the BioContext
 export const BioContext = createContext();
-
-// 2nd step
+ 
+// Step 2: Create the BioProvider
 export const BioProvider = ({ children }) => {
-  const myName = "vinod";
+  const myName = "Vinod";
   const myAge = 30;
-  console.log(children);
+  console.log(children)
 
   return (
     <BioContext.Provider value={{ myName, myAge }}>
@@ -17,11 +21,11 @@ export const BioProvider = ({ children }) => {
   );
 };
 
-// custom hooks
+// Step 3: Create a custom hook for consuming the context
 export const useBioContext = () => {
-  const context = use(BioContext);
-  // if (context === undefined) {
-  //   throw new Error("Component must be wrapped with BioProvider");
-  // }
+  const context = useContext(BioContext);
+  if (!context) {
+    throw new Error("Component must be wrapped with BioProvider");
+  }
   return context;
 };
