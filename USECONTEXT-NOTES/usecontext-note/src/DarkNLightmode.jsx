@@ -29,9 +29,9 @@ return setMode((prevMode) => (prevMode === "light" ? "dark" : "light"));
 
         return(
             <>
-            <div style={{ background: mode === "light" ? "#fff" : "#333", color: mode === "light" ? "#000" : "#fff", height: "100vh", textAlign: "center" }}>
+<div style={{ background: mode === "light" ? "#fff" : "#333", color: mode === "light" ? "#000" : "#fff", height: "100vh", textAlign: "center" }}>
 <h1>Dark and light mood website </h1>
-<p> hii this is react </p>
+<p> hii this is react  🚀 </p>
 <button onClick={HandleToggle}>{mode === "dark" ? "change to light mode" : " change to dark mode"}</button>
 
             </div>
