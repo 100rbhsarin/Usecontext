@@ -8,11 +8,11 @@ import { DarkLight, ThemeChange } from './DarkNLightmode'
 export const App = () => {
   return (
     <>
-    {/* <BioProvider>
+    <BioProvider>
       <Home />
       <About />
       <Services />
-    </BioProvider> */}
+    </BioProvider>
     <ThemeChange>
     <DarkLight/>
     </ThemeChange>
