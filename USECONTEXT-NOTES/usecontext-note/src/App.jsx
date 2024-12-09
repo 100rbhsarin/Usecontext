@@ -4,19 +4,23 @@ import { Home } from "./Home";
 import { About } from "./About";
 import { Services } from "./Services";
 import { DarkLight, ThemeChange } from './DarkNLightmode'
+import { UseReducer } from "./Usereducer/Reducer";
 
 export const App = () => {
   return (
     <>
-    <BioProvider>
+     
+    {/* <BioProvider>
       <Home />
       <About />
       <Services />
-    </BioProvider>
-    <ThemeChange>
+    </BioProvider> */}
+    {/* <ThemeChange>
     <DarkLight/>
-    </ThemeChange>
-   
+    </ThemeChange> */}
+
+    <UseReducer/>  
+
    
      </>
   );
