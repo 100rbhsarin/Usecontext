@@ -5,13 +5,13 @@ import { act, useReducer } from "react"
 export const UseReducer = () => {
 const initialstate = {
     count:0,
-    inc:2,
-    dec:2
+    inc:1,
+    dec:1
 }
 
 
 const reducer = (state, action)=>{
-console.log(state,action)
+console.log( state, action)
 
 // if(action.type == "INCREMENT"){
 //    return state + 1
@@ -27,22 +27,16 @@ console.log(state,action)
 
 switch(action.type){
 case 'INCREMENT':
-return {...state,count:state.count+1}
+return { ...state, count: state.count + state.inc}
 
 case 'DECREMENT':
-    return{...state,
-        count: state.count-1
-    }
+    return{...state, count: state.count - state.dec }
 
 case 'RESET':
-    return{
-  state, count: 0
-    }
+    return{state, count: 0 }
     
     case 'DEFAULT':
-    return{
-  state
-    }
+    return{state}
 }}
 
 
@@ -53,6 +47,9 @@ case 'RESET':
         <div>
 
 <h1>{state.count}</h1>
+
+
+{/* //dispatch will send action to reduce function  */}
 
 <button  onClick={()=>dispatch({type : 'INCREMENT'})}>Increment</button> 
 <button onClick={()=>dispatch({type : 'DECREMENT'})}>Decrement</button>

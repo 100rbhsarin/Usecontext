@@ -5,6 +5,8 @@ import { About } from "./About";
 import { Services } from "./Services";
 import { DarkLight, ThemeChange } from './DarkNLightmode'
 import { UseReducer } from "./Usereducer/Reducer";
+import { ReactMemo } from "./Memo/ReactMemo";
+import MemoagainCount from "./Memo/Usememo";
 
 export const App = () => {
   return (
@@ -19,8 +21,11 @@ export const App = () => {
     <DarkLight/>
     </ThemeChange> */}
 
-    <UseReducer/>  
+    {/* <UseReducer/>   */}
 
+    {/* <ReactMemo/> */}
+
+<MemoagainCount/>
    
      </>
   );
