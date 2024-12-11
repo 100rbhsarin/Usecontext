@@ -7,6 +7,10 @@ import { DarkLight, ThemeChange } from './DarkNLightmode'
 import { UseReducer } from "./Usereducer/Reducer";
 import { ReactMemo } from "./Memo/ReactMemo";
 import MemoagainCount from "./Memo/Usememo";
+import {Parent} from "./Memo/ReactMemoExample"
+import {Usememoexample} from "./Memo/UsEMemoExample"
+import {ParentCallBackExample} from  "./Memo/UsecallbackExample"
+
 
 export const App = () => {
   return (
@@ -25,8 +29,10 @@ export const App = () => {
 
     {/* <ReactMemo/> */}
 
-<MemoagainCount/>
-   
+{/* <MemoagainCount/> */}
+{/* <Parent/> */}
+{/* // <Usememoexample/> */}
+   <ParentCallBackExample/>
      </>
   );
 };
